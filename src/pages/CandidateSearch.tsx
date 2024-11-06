@@ -31,9 +31,9 @@ const CandidateSearch = () => {
         login: result.login
       }))
 
-      //console.log(loginResults, "Linee 29")
+      console.log(loginResults, "Linee 29")
       const usersArray = (loginResults.map((user) => user.login))
-      //console.log(usersArray, "line 36")
+      console.log(usersArray, "line 36")
 
       //get the array of usersnames to then put through searchGithubUser to get all of the properties
       const dataArray: any[] = await Promise.all(
@@ -51,7 +51,7 @@ const CandidateSearch = () => {
 
       // Filter out any null results if needed
       const filteredDataArray = dataArray.filter(user => user && Object.keys(user).length > 0);
-      //console.log(filteredDataArray, "line 53")
+      console.log(filteredDataArray, "line 53")
     
 
       const candidateDataArray = filteredDataArray.map(user => ({
